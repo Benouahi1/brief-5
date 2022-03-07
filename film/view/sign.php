@@ -1,3 +1,11 @@
+<?php 
+require '../controller/authentification.controller.php';
+	if(isset($_POST['submit'])){
+	$new_user = new login();
+	$new_user -> sign_up();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="./index.php">Ciné Master</a>
     <div class="collapse navbar-collapse" id="navbarScroll">
@@ -20,52 +28,45 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./login.php">Sign</a>
-        </li>
-        
+       
       </ul>
       
     </div>
   </div>
-</nav>
+</nav> -->
+<?php require_once './navbar.php'; ?>
    
 <div class="container a">
 <?php
 
-require 'Ajouter.php';
-$model = new Model();
-$insert = $model->insert();
+
+
+
 
 ?>
 
-<form action="" method="post">
+<form action="" method="POST">
 <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-10">
-      <input type="text" name="Nom" class="form-control" id="inputEmail3">
+      <input class="form-control" type="text" name="username" required>
     </div>
   </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Prenom</label>
-    <div class="col-sm-10">
-      <input type="text" name="Prenom" class="form-control" id="inputEmail3">
-    </div>
-  </div>
+  
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" name="Gmail" class="form-control" id="inputEmail3">
+    <input class="form-control" type="email" name="email" required>
     </div>
   </div>
   <div class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" name="pasword" class="form-control" id="inputPassword3">
+    <input class="form-control" type="password" name="passworde" required>
     </div>
   </div>
   
-  <div class="row mb-3">
+  <!-- <div class="row mb-3">
     <div class="col-sm-10 offset-sm-2">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
@@ -74,7 +75,7 @@ $insert = $model->insert();
         </label>
       </div>
     </div>
-  </div>
+  </div> -->
   <button type="submit" name="submit" class="btn btn-primary">Sign in</button>
 </form>
 </div>

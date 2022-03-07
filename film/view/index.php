@@ -10,7 +10,7 @@
     <title>Ciné Master</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Ciné Master</a>
     
@@ -24,6 +24,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
+          
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./login.php">Sign</a>
@@ -34,7 +35,8 @@
       
     </div>
   </div>
-</nav>
+</nav> -->
+<?php require_once './navbar.php'; ?>
 
    <main>
         <div>
